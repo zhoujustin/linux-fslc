@@ -271,7 +271,8 @@ dtb-$(CONFIG_ARCH_MXC) += \
 	imx7d-sdb-sim.dtb \
 	imx7d-sdb-touch.dtb \
 	imx7d-sdb-wm8960.dtb \
-	imx7d-sdb-m4.dtb
+	imx7d-sdb-m4.dtb \
+	imx7d-warp.dtb
 dtb-$(CONFIG_ARCH_MXS) += imx23-evk.dtb \
 	imx23-olinuxino.dtb \
 	imx23-stmp378x_devb.dtb \
