@@ -998,6 +998,7 @@
 				};
 
 				sai1: sai@308a0000 {
+					#sound-dai-cells = <0>;
 					compatible = "fsl,imx7d-sai",
 						     "fsl,imx6sx-sai";
 					reg = <0x308a0000 0x10000>;
@@ -1012,6 +1013,7 @@
 				};
 
 				sai2: sai@308b0000 {
+					#sound-dai-cells = <0>;
 					compatible = "fsl,imx7d-sai",
 						     "fsl,imx6sx-sai";
 					reg = <0x308b0000 0x10000>;
@@ -1026,6 +1028,7 @@
 				};
 
 				sai3: sai@308c0000 {
+					#sound-dai-cells = <0>;
 					compatible = "fsl,imx7d-sai",
 						     "fsl,imx6sx-sai";
 					reg = <0x308c0000 0x10000>;
