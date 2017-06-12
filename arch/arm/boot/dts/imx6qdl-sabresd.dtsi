@@ -289,11 +289,13 @@
 	};
 };
 
+/*
 &audmux {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_audmux>;
 	status = "okay";
 };
+*/
 
 &cpu0 {
 	/*arm-supply = <&sw1a_reg>;*/
