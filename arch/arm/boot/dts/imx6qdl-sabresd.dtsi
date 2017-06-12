@@ -21,6 +21,7 @@
 		mxcfb3 = &mxcfb4;
 	};
 
+	/*
 	battery: max8903@0 {
 		compatible = "fsl,max8903-charger";
 		pinctrl-names = "default";
@@ -33,6 +34,7 @@
 		fsl,usb_valid;
 		status = "okay";
 	};
+	*/
 
 	hannstar_cabc {
 		compatible = "hannstar,cabc";
@@ -1045,6 +1047,12 @@
 &uart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart3>;
+	status = "okay";
+};
+
+&can1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_can1>;
 	status = "okay";
 };
 
