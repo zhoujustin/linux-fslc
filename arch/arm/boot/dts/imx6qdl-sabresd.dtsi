@@ -331,7 +331,7 @@
 	phy-mode = "rgmii";
 	phy-reset-gpios = <&gpio1 25 0>;
 	fsl,magic-packet;
-	status = "okay";
+	status = "disabled";
 };
 
 &gpc {
