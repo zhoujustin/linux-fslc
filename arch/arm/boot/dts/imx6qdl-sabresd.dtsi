@@ -139,6 +139,15 @@
 			gpio = <&gpio6 14 0>;
 			enable-active-high;
 		};
+
+		reg_can: regulator@6 {
+			compatible = "regulator-fixed";
+			reg = <6>;
+			regulator-name = "can-supply";
+			gpio = <&gpio4 5 0>;
+			startup-delay-us = <500>;
+			enable-active-low;
+		};
 	};
 
 	gpio-keys {
@@ -654,10 +663,10 @@
 
 		pinctrl_audmux: audmuxgrp {
 			fsl,pins = <
-				//MX6QDL_PAD_CSI0_DAT7__AUD3_RXD		0x130b0
-				//MX6QDL_PAD_CSI0_DAT4__AUD3_TXC		0x130b0
-				//MX6QDL_PAD_CSI0_DAT5__AUD3_TXD		0x110b0
-				//MX6QDL_PAD_CSI0_DAT6__AUD3_TXFS		0x130b0
+				MX6QDL_PAD_CSI0_DAT7__AUD3_RXD		0x130b0
+				MX6QDL_PAD_CSI0_DAT4__AUD3_TXC		0x130b0
+				MX6QDL_PAD_CSI0_DAT5__AUD3_TXD		0x110b0
+				MX6QDL_PAD_CSI0_DAT6__AUD3_TXFS		0x130b0
 			>;
 		};
 
@@ -669,10 +678,10 @@
 				MX6QDL_PAD_KEY_COL0__ECSPI1_SCLK	0x100b1
 				MX6QDL_PAD_KEY_ROW1__GPIO4_IO09		0x1b0b0
 				*/
-				MX6QDL_PAD_CSI0_DAT4__ECSPI1_SCLK	0x100b1
-				MX6QDL_PAD_CSI0_DAT5__ECSPI1_MOSI	0x100b1
-				MX6QDL_PAD_CSI0_DAT6__ECSPI1_MISO	0x100b1
-				MX6QDL_PAD_CSI0_DAT7__ECSPI1_SS0	0x1b0b0
+				//MX6QDL_PAD_CSI0_DAT4__ECSPI1_SCLK	0x100b1
+				//MX6QDL_PAD_CSI0_DAT5__ECSPI1_MOSI	0x100b1
+				//MX6QDL_PAD_CSI0_DAT6__ECSPI1_MISO	0x100b1
+				//MX6QDL_PAD_CSI0_DAT7__ECSPI1_SS0	0x1b0b0
 			>;
 		};
 
@@ -1049,6 +1058,7 @@
 &can1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_can1>;
+	xceiver-supply = <&reg_can>;
 	status = "okay";
 };
 
