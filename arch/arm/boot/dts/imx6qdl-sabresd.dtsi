@@ -148,6 +148,16 @@
 			startup-delay-us = <500>;
 			enable-active-low;
 		};
+
+		reg_gps: regulator@7 {
+			compatible = "regulator-fixed";
+			reg = <7>;
+			regulator-name = "gps-reset";
+			gpio = <&gpio3 0 0>;
+			startup-delay-us = <500>;
+			regulator-always-on;
+			enable-active-high;
+		};
 	};
 
 	gpio-keys {
@@ -1052,6 +1062,7 @@
 &uart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart3>;
+	vcc-supply = <&reg_gps>;
 	status = "okay";
 };
 
